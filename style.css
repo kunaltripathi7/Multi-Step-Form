@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+}
+@font-face {
+  font-family: "medium";
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "regular";
+  src: url(assets/fonts/Ubuntu-Regular.ttf);
+}
+
+body {
+  background-color: hsl(229, 24%, 87%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "regular";
+}
+
+/*  In CSS, block elements like <div>, by default, expand horizontally to fill their parent's width, but vertically, they expand only as much as their content requires.  */
+.container {
+  background-color: hsl(0, 0%, 100%);
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu {
+  width: 45vh;
+  height: 70vh;
+  border-radius: 20px;
+  background: url(assets/images/bg-sidebar-desktop.svg) no-repeat;
+}
+
+.list {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.items {
+  margin: 20px;
+  color: hsl(229, 24%, 87%);
+  font-family: "regular";
+  font-size: 13px;
+}
+
+.item-det {
+  font-size: 16px;
+  font-family: "medium";
+  color: whitesmoke;
+  letter-spacing: 1.5px;
+}
+.title {
+  margin-top: 30px;
+}
+
+.h1-desc {
+  color: hsl(231, 11%, 63%);
+}
+
+/*       <!-- Step 2 start -->
+      <section>
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div>
+          <img src="assets/images/icon-arcade.svg" alt="icon" />
+          <h3>Arcade</h3>
+          <br />
+          <p>₹300/mo</p>
+        </div>
+        <div>
+          <img src="assets/images/icon-advanced.svg" alt="icon" />
+          <h3>Advanced</h3>
+          <br />
+          <p>₹600/mo</p>
+        </div>
+        <div>
+          <img src="assets/images/icon-pro.svg" alt="icon" />
+          <h3>Pro</h3>
+          <br />
+          <p>₹800/mo</p>
+        </div>
+        <div class="plan-switcher">
+          <h3>Monthly</h3>
+          <button>Click</button>
+          <h3>Yearly</h3>
+        </div>
+        <button>Go Back</button>
+        <button>Next Step</button>
+      </section>
+      <!-- Step 2 end -->
+
+      <!-- Step 3 start -->
+      <section>
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div>
+          <div>
+            <input type="checkbox" />
+            <h3>Online Service</h3>
+            <br />
+            <p>Online service Access to multiplayer games</p>
+          </div>
+          <div>+$1/mo</div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" />
+            <h3>Larger storage</h3>
+            <br />
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <div>+$2/mo</div>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" />
+            <h3>Customizable Profile</h3>
+            <br />
+            <p>Custom theme on your profile</p>
+          </div>
+          <div>+$2/mo</div>
+        </div>
+        <button>Go Back</button>
+        <button>Next Step</button>
+      </section>
+
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+      <section>
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+        <div class="summary-info"></div>
+        <button>Go Back</button>
+        <button>Confirm</button>
+      </section>
+
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+      <section>
+          
+                  <img src="assets/images/icon-thank-you.svg" alt="" />
+        <h1>Thank you!</h1>
+        <p>
+          Thank you! Thanks for confirming your subscription! We hope you have
+          fun using our platform. If you ever need support, please feel free to
+          email us at support@loremgaming.com.
+        </p>
+      </section> */

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- title icon linking -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar start -->
+      <nav class="menu">
+        <ol class="list">
+          <li class="items">
+            STEP 1<br />
+            <p class="item-det">YOUR INFO</p>
+          </li>
+          <li class="items">
+            STEP 2<br />
+            <p class="item-det">SELECT PLAN</p>
+          </li>
+          <li class="items">
+            STEP 3<br />
+            <p class="item-det">ADD-ONS</p>
+          </li>
+          <li class="items">
+            STEP 4<br />
+            <p class="item-det">SUMMARY</p>
+          </li>
+        </ol>
+      </nav>
+      <!-- Sidebar end -->
+
+      <!-- Step 1 start -->
+      <section class="info">
+        <h1 class="title">Personal info</h1>
+        <p class="h1-desc">
+          Please provide your name, email address, and phone number.
+        </p>
+        <form class="form-details">
+          <div>
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="e.g. Stephen King"
+            />
+          </div>
+          <div>
+            <label for="email">Email Address</label><br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="e.g. stephenking@lorem.com"
+            />
+          </div>
+          <div>
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="e.g. +1 234 567 890 Next Step"
+            />
+          </div>
+        </form>
+        <button>Next Step</button>
+      </section>
+      <!-- Step 1 end -->
+
+      <!-- Step 5 end -->
+    </div>
+  </body>
+</html>
