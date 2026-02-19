@@ -26,19 +26,30 @@ body {
   font-family: "regular";
 }
 
-/*  In CSS, block elements like <div>, by default, expand horizontally to fill their parent's width, but vertically, they expand only as much as their content requires.  */
+.hidden {
+  display: none;
+}
+
+.lighten {
+  color: hsl(229, 24%, 87%);
+}
+.darken {
+  color: hsl(231, 11%, 63%);
+}
+/*  In CSS, block elements like <div>, by default, expand horizontally to fill their parent's width, but vertically, they expand only as much as their content requires.*/
+/* the elements shrink inside div shrink when using height/width as % it automatically adapts so remove that || in case of flex flex-shrink : 0*/
 .container {
   background-color: hsl(0, 0%, 100%);
-  width: 65%;
+  width: 55%;
+  min-width: 500px;
   display: flex;
-  justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
 }
 
 .menu {
-  width: 45vh;
-  height: 70vh;
+  width: 250px;
+  height: 525px;
   border-radius: 20px;
   background: url(assets/images/bg-sidebar-desktop.svg) no-repeat;
 }
@@ -61,45 +72,106 @@ body {
   color: whitesmoke;
   letter-spacing: 1.5px;
 }
-.title {
-  margin-top: 30px;
+
+.page-container {
+  flex: 1;
+  padding: 24px;
+  position: relative;
 }
 
-.h1-desc {
+.page-heading {
+  font-size: 30px;
+  letter-spacing: 4px;
+}
+
+.page-desc {
   color: hsl(231, 11%, 63%);
+  padding: 20px 0px;
+  letter-spacing: 1px;
 }
 
-/*       <!-- Step 2 start -->
-      <section>
-        <h1>Select your plan</h1>
-        <p>You have the option of monthly or yearly billing.</p>
-        <div>
-          <img src="assets/images/icon-arcade.svg" alt="icon" />
-          <h3>Arcade</h3>
-          <br />
-          <p>₹300/mo</p>
-        </div>
-        <div>
-          <img src="assets/images/icon-advanced.svg" alt="icon" />
-          <h3>Advanced</h3>
-          <br />
-          <p>₹600/mo</p>
-        </div>
-        <div>
-          <img src="assets/images/icon-pro.svg" alt="icon" />
-          <h3>Pro</h3>
-          <br />
-          <p>₹800/mo</p>
-        </div>
-        <div class="plan-switcher">
-          <h3>Monthly</h3>
-          <button>Click</button>
-          <h3>Yearly</h3>
-        </div>
-        <button>Go Back</button>
-        <button>Next Step</button>
-      </section>
-      <!-- Step 2 end -->
+.label-desc {
+  font-size: 18px;
+  margin: 15px 0px;
+}
+
+.textbox {
+  width: 600px;
+  height: 45px;
+  border-radius: 7px;
+  border-color: hsl(229, 24%, 87%);
+}
+
+::placeholder {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.nav-btn-next {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0px 40px 20px 0px;
+  border-radius: 7px;
+  width: 110px;
+  height: 35px;
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(0, 0%, 100%);
+}
+
+.plan {
+  border-style: solid;
+  border-color: hsl(231, 11%, 63%);
+  border-radius: 10px;
+  height: 170px;
+}
+
+.inner-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.plan-svg {
+  margin: 10px 0px 0px 10px;
+}
+
+.plan-info {
+  margin: 45px 0px 0px 10px;
+}
+
+.plan-content {
+  margin-bottom: -10px;
+}
+
+.plan-switcher {
+  grid-column: 1/-1;
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 10px 0px;
+}
+
+.nav-btns {
+  position: absolute;
+  width: 80vh;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn-back {
+  width: 110px;
+  border: none;
+  font-size: 14px;
+  background-color: white;
+  margin-bottom: 20px;
+  height: 35px;
+}
+
+/* problems : button toggle, 1,2,3,4 , shrinking problem */
+
+/*       
 
       <!-- Step 3 start -->
       <section>

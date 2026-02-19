@@ -13,6 +13,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <title>Multi-step form</title>
   </head>
   <body>
@@ -41,46 +42,97 @@
       <!-- Sidebar end -->
 
       <!-- Step 1 start -->
-      <section class="info">
-        <h1 class="title">Personal info</h1>
-        <p class="h1-desc">
+      <section class="page-container page1" data-page="1">
+        <h1 class="page-heading">Personal info</h1>
+        <p class="page-desc">
           Please provide your name, email address, and phone number.
         </p>
         <form class="form-details">
-          <div>
+          <div class="label-desc">
+            <!-- putting only label inside div also useful for rendering error. -->
             <label for="name">Name</label><br />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="e.g. Stephen King"
-            />
           </div>
-          <div>
+          <input
+            class="textbox"
+            type="text"
+            id="name"
+            required
+            placeholder="e.g. Stephen King"
+          />
+          <div class="label-desc">
             <label for="email">Email Address</label><br />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="e.g. stephenking@lorem.com"
-            />
           </div>
-          <div>
-            <label for="name">Name</label><br />
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="e.g. +1 234 567 890 Next Step"
-            />
-          </div>
+          <input
+            class="textbox"
+            type="text"
+            id="email"
+            required
+            placeholder="e.g. stephenking@lorem.com"
+          />
+          <div class="label-desc"><label for="add">Address</label><br /></div>
+          <input
+            class="textbox"
+            type="text"
+            id="add"
+            required
+            placeholder="e.g. +1 234 567 890 Next Step"
+          />
         </form>
-        <button>Next Step</button>
+        <button class="nav-btn-next">Next Step</button>
       </section>
       <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+      <section class="page-container page2 hidden" data-page="2">
+        <h1 class="page-heading">Select your plan</h1>
+        <p class="page-desc">
+          You have the option of monthly or yearly billing.
+        </p>
+        <div class="inner-container">
+          <div class="plan">
+            <img
+              class="plan-svg"
+              src="assets/images/icon-arcade.svg"
+              alt="icon"
+            />
+            <div class="plan-info">
+              <h3 class="plan-content">Arcade</h3>
+              <br />
+              <p class="darken">₹300/mo</p>
+            </div>
+          </div>
+          <div class="plan">
+            <img
+              class="plan-svg"
+              src="assets/images/icon-advanced.svg"
+              alt="icon"
+            />
+            <div class="plan-info">
+              <h3 class="plan-content">Advanced</h3>
+              <br />
+              <p class="darken">₹600/mo</p>
+            </div>
+          </div>
+          <div class="plan">
+            <img class="plan-svg" src="assets/images/icon-pro.svg" alt="icon" />
+            <div class="plan-info">
+              <h3 class="plan-content">Pro</h3>
+              <br />
+              <p class="darken">₹800/mo</p>
+            </div>
+          </div>
+          <div class="plan-switcher">
+            <p>Monthly</p>
+            <button>Click</button>
+            <p>Yearly</p>
+          </div>
+        </div>
+        <div class="nav-btns">
+          <button class="nav-btn-back darken">Go Back</button>
+          <button class="nav-btn-next">Next Step</button>
+        </div>
+      </section>
+      <!-- Step 2 end -->
 
       <!-- Step 5 end -->
     </div>
